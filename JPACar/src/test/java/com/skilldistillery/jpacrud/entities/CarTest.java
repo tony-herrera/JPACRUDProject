@@ -48,6 +48,11 @@ class CarTest {
 	void test_Car_entity_mapping() {
 		assertNotNull(car);
 		assertEquals("Model S", car.getModel());
+		assertEquals(70000, car.getPrice());
+		assertEquals(5, car.getSafetyRating());
+		assertEquals(155, car.getMaxSpeed());
+		assertEquals("electric", car.getFuelType());
+		assertEquals("new", car.getMake());
 
 	}
 

@@ -51,6 +51,8 @@
 		</c:choose>
 	</div>
 	<a href="createcar.html">Add a new car!</a>
+	<br>
+	<a href="home.do">Go to HomePage</a>
 
 </body>
 </html>
