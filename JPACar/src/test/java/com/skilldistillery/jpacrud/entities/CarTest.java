@@ -47,7 +47,7 @@ class CarTest {
 	@Test
 	void test_Car_entity_mapping() {
 		assertNotNull(car);
-		assertEquals("Tesla", car.getName());
+		assertEquals("Model S", car.getModel());
 
 	}
 
