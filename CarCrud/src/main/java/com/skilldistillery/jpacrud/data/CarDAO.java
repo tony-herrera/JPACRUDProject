@@ -12,7 +12,7 @@ public interface CarDAO {
 
 	Car createCar(Car car);
 
-	Car updateCar(Car car);
+	Car updateCar(int id, Car car);
 
 	boolean destroyCar(int id);
 }

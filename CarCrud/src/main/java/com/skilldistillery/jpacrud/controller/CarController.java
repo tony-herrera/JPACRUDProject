@@ -25,7 +25,7 @@ public class CarController {
 		return "index";
 	}
 
-	@RequestMapping(path = "getCar.do", method = RequestMethod.GET)
+	@RequestMapping(path = "getCar.do")
 	public String giveCar(Integer cid, Model model) {
 
 		Car car = carDAO.findById(cid);
@@ -33,18 +33,29 @@ public class CarController {
 		return "show";
 	}
 
-	@RequestMapping(path = "createcar.do", method = RequestMethod.GET)
+	@RequestMapping(path = "createcar.do")
 	public String createCar(Car newcar, Model model) {
 		Car car = carDAO.createCar(newcar);
 		model.addAttribute("car", car);
 		return "newcar";
 	}
 
-	@RequestMapping(path = "createcar.do", method = RequestMethod.POST)
-	public String updateCar(Car updatecar, Model model) {
-		Car car = carDAO.updateCar(updatecar);
-		model.addAttribute("car", car);
-		return "updatecar";
+	@RequestMapping(path = "destroy.do")
+	public String destroyCar(Integer id, Model model) {
+		carDAO.destroyCar(id);
+		return "index";
+	}
+
+	@RequestMapping(path = "updatecar.do")
+	public String updateCar(int id, Car car) {
+		Car updatecar = carDAO.updateCar(id, car);
+		return "index";
+
+	}
+
+	@RequestMapping(path = "home.do")
+	public String homePage() {
+		return "index";
 
 	}
 

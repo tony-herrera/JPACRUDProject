@@ -47,9 +47,10 @@ public class CarDAOImpl implements CarDAO {
 
 	@Transactional
 	@Override
-	public Car updateCar(Car car) {
+	public Car updateCar(int id, Car car) {
+		Car dbCar = em.find(Car.class, id);
 
-		em.persist(car);
+		dbCar.setMake(car.getMake());
 		em.close();
 		return car;
 	}

@@ -25,6 +25,6 @@
 		</c:choose>
 	</div>
 	<br>
-	<a href="index">Go to HomePage</a>
+	<a href="home.do">Go to HomePage</a>
 </body>
 </html>
