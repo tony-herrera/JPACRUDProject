@@ -54,7 +54,9 @@ public class CarController {
 	}
 
 	@RequestMapping(path = "home.do")
-	public String homePage() {
+	public String homePage(Model model) {
+		List<Car> findCars = carDAO.findAll();
+		model.addAttribute("cararray", findCars);
 		return "index";
 
 	}

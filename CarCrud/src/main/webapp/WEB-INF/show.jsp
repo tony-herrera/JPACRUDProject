@@ -5,11 +5,28 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+	integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+	crossorigin="anonymous">
 <meta charset="UTF-8">
+<style>
+body {
+	background-color: darkGrey;
+}
+
+h1 {
+	color: blue;
+}
+
+div {
+	color: eggwhite;
+}
+</style>
 <title>Show me the Cars!</title>
 </head>
 <body>
-	<div>
+	<div class="container-fluid">
 		<c:choose>
 			<c:when test="${! empty car}">
 				<div>
@@ -49,6 +66,17 @@
 				<div>That Car Id number does not exist.</div>
 			</c:otherwise>
 		</c:choose>
+		<table class="table table-dark table table-striped table-hover">
+			<thead class="thead thead-light">
+			</thead>
+			<tbody>
+				<c:forEach items="${cararray}" var="car">
+					<tr>
+						<td><a href="getCar.do?cid=${car.id}">${car.make}</a></td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
 	</div>
 	<a href="createcar.html">Add a new car!</a>
 	<br>

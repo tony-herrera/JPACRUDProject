@@ -10,15 +10,32 @@
 	integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
 	crossorigin="anonymous">
 <meta charset="UTF-8">
-<title>Car Home Page</title>
+<style>
+body {
+	background-color: darkGrey;
+}
+
+h1 {
+	color: blue;
+}
+
+div {
+	color: eggwhite;
+}
+</style>
+</head>
+<body>
+	<title>Car Home Page</title>
 </head>
 <body>
 
 	<nav aria-label="breadcrumb">
 		<ol class="breadcrumb">
-			<li class="breadcrumb-item"><a href="#">Home</a></li>
-			<li class="breadcrumb-item active"><a href="createcar.jsp">Add
-					a New Car!</a></li>
+			<li class="breadcrumb-item"><a href="updatecar.do">Update a
+					car!</a></li>
+			<li class="breadcrumb-item"><a href="createcar.jsp">Add a
+					new car!</a></li>
+			<li class="breadcrumb-item active" aria-current="home.do">Home</li>
 		</ol>
 	</nav>
 	<div class="container-fluid">
